@@ -13,8 +13,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.lightBlue,
-          title: const Text('Flutter is okayish so far')
+          title: const Text('Flutter')
         ),
+
+      body: Container(
+        child: const Text('Test text'),
+        )
+
       ),
     );
   }
