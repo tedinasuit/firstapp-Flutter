@@ -12,11 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.lightBlue,
-          title: const Text('Flutter is:')
+          backgroundColor: Color.fromARGB(255, 255, 90, 90),
+          title: const Text('Eindhoven Freedom Walk')
         ),
 
-      body: Column (
+      body: 
+      Column (
         children: [
           Stack(
             children: [
@@ -25,17 +26,44 @@ class MyApp extends StatelessWidget {
                 width: 100,
                 height: 100,
               ),
-              Icon(Icons.access_alarm),
+              const Icon(Icons.access_alarm),
             ],
           ),
-          Row(
+          const Row (
             children: [
               Icon(Icons.access_alarm_sharp),
               Icon(Icons.add_reaction)
             ],
           )
         ]
-      )
+      ),
+
+      floatingActionButton: FloatingActionButton (
+        backgroundColor: Color.fromARGB(255, 255, 90, 90),
+        child: const Icon(Icons.add),
+        onPressed: () {
+          print('pressed!');
+        }
+      ),
+
+      bottomNavigationBar: BottomNavigationBar (
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_filled),
+            label: 'Home',
+          ),
+                    BottomNavigationBarItem(
+            icon: Icon(Icons.leaderboard),
+            label: 'Ranking',
+          ),
+                    BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+        ],
+      ),
+
+    
 
       ),
     );
