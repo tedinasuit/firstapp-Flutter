@@ -4,48 +4,40 @@ void main() {
   runApp( MyApp() );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int count = 0;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 255, 90, 90),
+          backgroundColor: const Color.fromARGB(255, 255, 90, 90),
           title: const Text('Eindhoven Freedom Walk')
         ),
 
-      body: 
-      Column (
-        children: [
-          Stack(
-            children: [
-              Container(
-                color: Colors.orange,
-                width: 100,
-                height: 100,
-              ),
-              const Icon(Icons.access_alarm),
-            ],
-          ),
-          const Row (
-            children: [
-              Icon(Icons.access_alarm_sharp),
-              Icon(Icons.add_reaction)
-            ],
-          )
-        ]
+      body: Center (
+        child: Text(
+          '$count',
+        ),
       ),
 
       floatingActionButton: FloatingActionButton (
-        backgroundColor: Color.fromARGB(255, 255, 90, 90),
-        child: const Icon(Icons.add),
+        backgroundColor: const Color.fromARGB(255, 255, 90, 90),
+        child: const Icon(Icons.add), 
         onPressed: () {
-          print('pressed!');
+          setState(() {
+            count++;
+          });
         }
       ),
-
       bottomNavigationBar: BottomNavigationBar (
         items: const [
           BottomNavigationBarItem(
