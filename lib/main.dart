@@ -13,18 +13,30 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.lightBlue,
-          title: const Text('Flutter')
+          title: const Text('Flutter is:')
         ),
 
-      body: Center(
-        child: Container(
-          child: const Text('Test text'),
-          margin: const EdgeInsets.all(100),
-          padding: EdgeInsets.all(10),
-          height: 100,
-          width: 100,
-          color: Colors.blueGrey,
+      body: Column(
+        children: [
+          Center(
+            child: Container(
+              child: const Text('hard if you are a media student'),
+              margin: const EdgeInsets.all(100),
+              padding: EdgeInsets.all(10),
+              height: 100,
+              width: 100,
+              color: Colors.blueGrey,
+              ),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Icon(Icons.airplay),
+              Icon(Icons.contacts),
+              Icon(Icons.incomplete_circle),
+            ],
+          )
+        ],
       )
 
       ),
