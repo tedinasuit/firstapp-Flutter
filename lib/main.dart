@@ -4,6 +4,7 @@ void main() {
   runApp( MyApp() );
 }
 
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -23,10 +24,28 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Eindhoven Freedom Walk')
         ),
 
-      body: Center (
-        child: Text(
-          '$count',
-        ),
+      body: Column(
+        children: [
+          Center (
+            child: Text(
+              '$count',
+              style: const TextStyle(fontSize: 50),
+            ),
+          ),
+
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (_) => const Instructions(),
+                )
+                
+              );
+            }, 
+            child: const Text('Instructions')
+            ),
+        ],
       ),
 
       floatingActionButton: FloatingActionButton (
@@ -58,6 +77,17 @@ class _MyAppState extends State<MyApp> {
     
 
       ),
+    );
+  }
+}
+
+class Instructions extends StatelessWidget {
+  const Instructions({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
     );
   }
 }
