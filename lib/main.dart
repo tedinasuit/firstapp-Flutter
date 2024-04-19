@@ -81,9 +81,6 @@ class _HomeContentState extends State<HomeContent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -110,7 +107,9 @@ class _HomeContentState extends State<HomeContent> {
         backgroundColor: const Color.fromARGB(255, 255, 90, 90),
         child: const Icon(Icons.add),
         onPressed: () {
-          count++;
+          setState(() {
+            count++;
+          });
         },
       ),
     );
