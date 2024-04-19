@@ -1,16 +1,11 @@
-# firstapp
+# What is it?
 
-A new Flutter project.
+My first ever flutter project. I am trying to understand how the Widget Tree structure works. How to do basic things like navigation, a counter, et cetera.
 
-## Getting Started
+This test project has:
+- Multiple pages (which are widgets)
+- A working navigation bar
+- A working Action Button with updating text
+- A button that pops up a new page
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/tedinasuit/firstapp-Flutter/assets/73829267/b1bc7262-1c9f-4eb7-8644-80cb498d4577)
