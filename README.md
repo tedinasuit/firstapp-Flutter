@@ -8,4 +8,4 @@ This test project has:
 - A working Action Button with updating text
 - A button that pops up a new page
 
-![image](https://github.com/tedinasuit/firstapp-Flutter/assets/73829267/b1bc7262-1c9f-4eb7-8644-80cb498d4577)
+<img src="https://github.com/tedinasuit/firstapp-Flutter/assets/73829267/b1bc7262-1c9f-4eb7-8644-80cb498d4577" alt="image" height="500" height="auto">
